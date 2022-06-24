@@ -1,4 +1,5 @@
 import 'package:app/common/constant.dart';
+import 'package:app/screen/auth/SignInScreen.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/constant.dart';
@@ -47,7 +48,13 @@ class _SplashScreenState extends State<SplashScreen> {
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => SignInScreen(),
+                                    ));
+                              },
                               child: Text(
                                 'SKIP',
                                 style: TextStyle(
