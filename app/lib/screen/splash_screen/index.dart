@@ -12,12 +12,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  int currentPage = 0;
-  List<Map<String, String>> splashData = [
-    {"text": "Welcome to TOKOTO", "image": "assets/images/splash1.png"},
-    {"text": "Welcome to TOKOTO", "image": "assets/images/splash2.png"},
-    {"text": "Welcome to TOKOTO", "image": "assets/images/splash3.png"}
-  ];
   final String welcome = "Welcome to TOKOTO";
   @override
   Widget build(BuildContext context) {
@@ -29,30 +23,17 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Padding(padding: const EdgeInsets.only(top: 30)),
               Expanded(
-                flex: 3,
-                child: PageView.builder(
-                  onPageChanged: (value) {
-                    setState(() {
-                      currentPage = value;
-                    });
-                  },
-                  itemCount: splashData.length,
-                  itemBuilder: (context, index) => SplashContent(
-                      text: "s", image: 'assets/images/splash1.png'),
-                ),
-              ),
-              // Expanded(
-              //     flex: 3,
-              //     child: PageView(
-              //       children: [
-              //         SplashContent(
-              //             text: welcome, image: 'assets/images/splash1.png'),
-              //         SplashContent(
-              //             text: welcome, image: 'assets/images/splash2.png'),
-              //         SplashContent(
-              //             text: welcome, image: 'assets/images/splash3.png'),
-              //       ],
-              //     )),
+                  flex: 3,
+                  child: PageView(
+                    children: [
+                      SplashContent(
+                          text: welcome, image: 'assets/images/splash1.png'),
+                      SplashContent(
+                          text: welcome, image: 'assets/images/splash2.png'),
+                      SplashContent(
+                          text: welcome, image: 'assets/images/splash3.png'),
+                    ],
+                  )),
               Expanded(
                 flex: 1,
                 child: Container(
