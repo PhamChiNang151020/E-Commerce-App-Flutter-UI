@@ -1,3 +1,5 @@
+import 'package:ecommerce_app/common/theme.dart';
+import 'package:ecommerce_app/screen/auth/components/BodySignIn.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -6,8 +8,14 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(),
+    return Scaffold(
+      // appBar: AppBar(
+      //   title: Text(
+      //     'Sign In',
+      //     style: TextStyle(fontSize: 30, color: Colors.black),
+      //   ),
+      // ),
+      body: BodySignIn(),
     );
   }
 }

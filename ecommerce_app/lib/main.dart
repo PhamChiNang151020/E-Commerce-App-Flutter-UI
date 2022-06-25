@@ -1,8 +1,8 @@
-import 'package:ecommerce_app/common/constants.dart';
 import 'package:ecommerce_app/screen/splashScreen/splashScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'common/route.dart';
+import 'common/theme.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,15 +18,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily: "Kanit",
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: textColor),
-          bodyText2: TextStyle(color: textColor),
-        ),
-      ),
+      theme: theme(),
       // home: SplashScreen(),
       initialRoute: SplashScreen.routeName,
       routes: routes,
