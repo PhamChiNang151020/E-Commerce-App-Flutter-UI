@@ -2,6 +2,8 @@ import 'package:ecommerce_app/common/constants.dart';
 import 'package:ecommerce_app/screen/splashScreen/splashScreen.dart';
 import 'package:flutter/material.dart';
 
+import 'common/route.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -27,6 +29,7 @@ class _MyAppState extends State<MyApp> {
       ),
       // home: SplashScreen(),
       initialRoute: SplashScreen.routeName,
+      routes: routes,
     );
   }
 }

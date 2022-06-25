@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/common/constants.dart';
+import 'package:ecommerce_app/screen/auth/SignInScreen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../widget/DefaultButton.dart';
@@ -57,7 +58,9 @@ class _BodySplashScreenState extends State<BodySplashScreen> {
                   ),
                   DefaultButton(
                     text: 'Continue',
-                    press: () {},
+                    press: () {
+                      Navigator.pushNamed(context, SignInScreen.routeName);
+                    },
                   ),
                 ],
               ),
