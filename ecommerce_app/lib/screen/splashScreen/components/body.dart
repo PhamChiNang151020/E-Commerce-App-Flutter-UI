@@ -25,7 +25,7 @@ class _BodySplashScreenState extends State<BodySplashScreen> {
       child: Column(
         children: [
           Expanded(
-            flex: 4,
+            flex: 3,
             child: PageView.builder(
               onPageChanged: (value) {
                 setState(() {
@@ -49,7 +49,6 @@ class _BodySplashScreenState extends State<BodySplashScreen> {
                     padding: const EdgeInsets.only(bottom: 30),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      // crossAxisAlignment: CrossAxisAlignment.center,
                       children: List.generate(
                         splashData.length,
                         (index) => buildDot(index: index),

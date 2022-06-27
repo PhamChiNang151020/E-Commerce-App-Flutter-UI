@@ -1,6 +1,6 @@
-import 'package:ecommerce_app/common/theme.dart';
 import 'package:flutter/material.dart';
 
+import '../../../common/constants.dart';
 import 'components/BodySignIn.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -13,7 +13,9 @@ class SignInScreen extends StatelessWidget {
       // appBar: AppBar(
       //   title: Text(
       //     'Sign In',
-      //     style: TextStyle(fontSize: 30, color: Colors.black),
+      //     style: TextStyle(
+      //       color: defaultPrimaryColor,
+      //     ),
       //   ),
       // ),
       body: BodySignIn(),

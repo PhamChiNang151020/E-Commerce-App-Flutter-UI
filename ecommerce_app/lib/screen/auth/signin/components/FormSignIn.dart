@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:ecommerce_app/screen/HomePage.dart';
 import 'package:ecommerce_app/screen/auth/forgot/ForgotScreen.dart';
 import 'package:ecommerce_app/screen/splashScreen/splashScreen.dart';
@@ -130,14 +128,8 @@ class _SignInFormState extends State<SignInForm> {
       decoration: InputDecoration(
         labelText: "Password",
         hintText: "Enter your password",
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: textColor,
-        ),
-        hintStyle: TextStyle(
-          fontSize: 20,
-          color: textColor,
-        ),
+        labelStyle: styleLabel(),
+        hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 10),
@@ -184,17 +176,25 @@ class _SignInFormState extends State<SignInForm> {
       decoration: InputDecoration(
         labelText: "Email",
         hintText: "Enter your email",
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: textColor,
-        ),
-        hintStyle: TextStyle(
-          fontSize: 20,
-          color: textColor,
-        ),
+        labelStyle: styleLabel(),
+        hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/mail.png'),
       ),
+    );
+  }
+
+  TextStyle styleHint() {
+    return TextStyle(
+      fontSize: 20,
+      color: textColor,
+    );
+  }
+
+  TextStyle styleLabel() {
+    return TextStyle(
+      fontSize: 25,
+      color: textColor,
     );
   }
 }

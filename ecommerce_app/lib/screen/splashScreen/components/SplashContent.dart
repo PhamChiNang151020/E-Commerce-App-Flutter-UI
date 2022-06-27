@@ -27,7 +27,7 @@ class SplashContent extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 25, bottom: 40),
+          padding: const EdgeInsets.only(top: 25, bottom: 20),
           child: Text(text!.toUpperCase(),
               style: TextStyle(
                 fontSize: 20,

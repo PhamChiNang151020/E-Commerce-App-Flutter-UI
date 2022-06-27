@@ -1,6 +1,5 @@
 import 'package:ecommerce_app/common/constants.dart';
 import 'package:ecommerce_app/screen/auth/signup/SignUpScreen.dart';
-import 'package:ecommerce_app/widget/DefaultButton.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../widget/CartIcon.dart';
@@ -62,7 +61,8 @@ class _BodySignInState extends State<BodySignIn> {
                     ],
                   ),
                 ),
-                NoAccountText()
+                NoAccountText(),
+                SizedBox(height: 20),
               ],
             ),
           ),

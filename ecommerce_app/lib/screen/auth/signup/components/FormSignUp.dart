@@ -3,10 +3,8 @@ import 'package:ecommerce_app/widget/DefaultButton.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/constants.dart';
-import '../../../../helps/KeyBoardUtil.dart';
 import '../../../../widget/CustomSuffixIcon.dart';
 import '../../../../widget/FormError.dart';
-import '../../../HomePage.dart';
 
 class FormSignUp extends StatefulWidget {
   const FormSignUp({Key? key}) : super(key: key);
@@ -93,14 +91,8 @@ class _FormSignUpState extends State<FormSignUp> {
       decoration: InputDecoration(
         labelText: "Password",
         hintText: "Enter your password",
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: textColor,
-        ),
-        hintStyle: TextStyle(
-          fontSize: 20,
-          color: textColor,
-        ),
+        labelStyle: styleLabel(),
+        hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 10),
@@ -148,14 +140,8 @@ class _FormSignUpState extends State<FormSignUp> {
       decoration: InputDecoration(
         labelText: "Confirm Password",
         hintText: "Re - enter your password",
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: textColor,
-        ),
-        hintStyle: TextStyle(
-          fontSize: 20,
-          color: textColor,
-        ),
+        labelStyle: styleLabel(),
+        hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 10),
@@ -204,17 +190,25 @@ class _FormSignUpState extends State<FormSignUp> {
       decoration: InputDecoration(
         labelText: "Email",
         hintText: "Enter your email",
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: textColor,
-        ),
-        hintStyle: TextStyle(
-          fontSize: 20,
-          color: textColor,
-        ),
+        labelStyle: styleLabel(),
+        hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/mail.png'),
       ),
+    );
+  }
+
+  TextStyle styleHint() {
+    return TextStyle(
+      fontSize: 20,
+      color: textColor,
+    );
+  }
+
+  TextStyle styleLabel() {
+    return TextStyle(
+      fontSize: 25,
+      color: textColor,
     );
   }
 }

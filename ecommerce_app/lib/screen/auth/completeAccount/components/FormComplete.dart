@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:ecommerce_app/widget/DefaultButton.dart';
 import 'package:ecommerce_app/widget/FormError.dart';
 import 'package:flutter/material.dart';
@@ -87,14 +85,8 @@ class _FormCompleteState extends State<FormComplete> {
       decoration: InputDecoration(
         labelText: "Address",
         hintText: "Enter your address",
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: textColor,
-        ),
-        hintStyle: TextStyle(
-          fontSize: 20,
-          color: textColor,
-        ),
+        labelStyle: styleLable(),
+        hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/location.png'),
       ),
@@ -121,14 +113,8 @@ class _FormCompleteState extends State<FormComplete> {
       decoration: InputDecoration(
         labelText: "Phone number",
         hintText: "Enter your phone number",
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: textColor,
-        ),
-        hintStyle: TextStyle(
-          fontSize: 20,
-          color: textColor,
-        ),
+        labelStyle: styleLable(),
+        hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/phone.png'),
       ),
@@ -154,14 +140,8 @@ class _FormCompleteState extends State<FormComplete> {
       decoration: InputDecoration(
         labelText: "First name",
         hintText: "Enter your first name",
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: textColor,
-        ),
-        hintStyle: TextStyle(
-          fontSize: 20,
-          color: textColor,
-        ),
+        labelStyle: styleLable(),
+        hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/account.png'),
       ),
@@ -187,17 +167,25 @@ class _FormCompleteState extends State<FormComplete> {
       decoration: InputDecoration(
         labelText: "Last name",
         hintText: "Enter your last name",
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: textColor,
-        ),
-        hintStyle: TextStyle(
-          fontSize: 20,
-          color: textColor,
-        ),
+        labelStyle: styleLable(),
+        hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/account.png'),
       ),
+    );
+  }
+
+  TextStyle styleHint() {
+    return TextStyle(
+      fontSize: 20,
+      color: textColor,
+    );
+  }
+
+  TextStyle styleLable() {
+    return TextStyle(
+      fontSize: 25,
+      color: textColor,
     );
   }
 }
