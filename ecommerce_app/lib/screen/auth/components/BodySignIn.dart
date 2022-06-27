@@ -2,6 +2,10 @@ import 'package:ecommerce_app/common/constants.dart';
 import 'package:ecommerce_app/widget/DefaultButton.dart';
 import 'package:flutter/material.dart';
 
+import '../../../widget/CartIcon.dart';
+import '../../../widget/CustomSuffixIcon.dart';
+import 'FormSignIn.dart';
+
 class BodySignIn extends StatefulWidget {
   const BodySignIn({Key? key}) : super(key: key);
 
@@ -21,7 +25,7 @@ class _BodySignInState extends State<BodySignIn> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 70),
+                SizedBox(height: 40),
                 Text(
                   'Welcome to\nMy App',
                   style: TextStyle(
@@ -31,7 +35,7 @@ class _BodySignInState extends State<BodySignIn> {
                   ),
                   // textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 70),
+                SizedBox(height: 40),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 20),
                   child: Text(
@@ -44,32 +48,55 @@ class _BodySignInState extends State<BodySignIn> {
                     textAlign: TextAlign.left,
                   ),
                 ),
-                DefaultButton(
-                  text: 'Sign In'.toUpperCase(),
-                  press: () {},
+                SignInForm(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CardIcon(image: 'assets/icon/fb.png', onPress: () {}),
+                      Padding(padding: EdgeInsets.symmetric(horizontal: 15)),
+                      CardIcon(image: 'assets/icon/gg.png', onPress: () {}),
+                    ],
+                  ),
                 ),
-                Row(
-                  children: [
-                    Container(
-                      width: 55,
-                      height: 55,
-                      decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        shape: BoxShape.circle,
-                      ),
-                      child: Image.asset(
-                        'assets/icon/fb.png',
-                        width: 20,
-                        height: 20,
-                      ),
-                    ),
-                  ],
-                )
+                NoAccountText()
               ],
             ),
           ),
         ),
       ),
+    );
+  }
+}
+
+class NoAccountText extends StatelessWidget {
+  const NoAccountText({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Don’t have an account? ",
+          style: TextStyle(
+            fontSize: 16,
+            color: textColor,
+          ),
+        ),
+        TextButton(
+            onPressed: () {},
+            child: Text(
+              'Sign Up',
+              style: TextStyle(
+                fontSize: 16,
+                color: defaultPrimaryColor,
+              ),
+            )),
+      ],
     );
   }
 }

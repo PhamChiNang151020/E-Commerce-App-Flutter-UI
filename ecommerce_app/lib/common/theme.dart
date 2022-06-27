@@ -9,6 +9,25 @@ ThemeData theme() {
     visualDensity: VisualDensity.adaptivePlatformDensity,
     fontFamily: "Kanit",
     textTheme: textTheme(),
+    inputDecorationTheme: inputDecorationTheme(),
+  );
+}
+
+InputDecorationTheme inputDecorationTheme() {
+  var outlineInputBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(20),
+    borderSide: BorderSide(color: textColor),
+    gapPadding: 10,
+  );
+  return InputDecorationTheme(
+    floatingLabelBehavior: FloatingLabelBehavior.always,
+    contentPadding: EdgeInsets.symmetric(
+      horizontal: 25,
+      vertical: 20,
+    ),
+    enabledBorder: outlineInputBorder,
+    focusedBorder: outlineInputBorder,
+    border: outlineInputBorder,
   );
 }
 
