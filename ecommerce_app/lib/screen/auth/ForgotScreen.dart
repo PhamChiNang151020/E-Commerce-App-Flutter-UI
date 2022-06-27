@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/screen/auth/components/BodyForgot.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
@@ -6,6 +7,8 @@ class ForgotPasswordScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: BodyForgotPassword(),
+    );
   }
 }

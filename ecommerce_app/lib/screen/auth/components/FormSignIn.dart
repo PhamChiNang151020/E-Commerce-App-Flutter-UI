@@ -6,6 +6,7 @@ import 'package:ecommerce_app/screen/splashScreen/splashScreen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common/constants.dart';
+import '../../../helps/KeyBoardUtil.dart';
 import '../../../widget/CustomSuffixIcon.dart';
 import '../../../widget/DefaultButton.dart';
 import '../../../widget/FormError.dart';
@@ -198,11 +199,3 @@ class _SignInFormState extends State<SignInForm> {
   }
 }
 
-class KeyboardUtil {
-  static void hideKeyboard(BuildContext context) {
-    FocusScopeNode currentFocus = FocusScope.of(context);
-    if (!currentFocus.hasPrimaryFocus) {
-      currentFocus.unfocus();
-    }
-  }
-}
