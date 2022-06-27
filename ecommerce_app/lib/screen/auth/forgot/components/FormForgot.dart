@@ -1,11 +1,11 @@
 import 'package:ecommerce_app/widget/DefaultButton.dart';
 import 'package:flutter/material.dart';
 
-import '../../../common/constants.dart';
-import '../../../helps/KeyBoardUtil.dart';
-import '../../../widget/CustomSuffixIcon.dart';
-import '../../../widget/FormError.dart';
-import '../../HomePage.dart';
+import '../../../../common/constants.dart';
+import '../../../../helps/KeyBoardUtil.dart';
+import '../../../../widget/CustomSuffixIcon.dart';
+import '../../../../widget/FormError.dart';
+import '../../../HomePage.dart';
 
 class FormForgotPassword extends StatefulWidget {
   const FormForgotPassword({Key? key}) : super(key: key);
@@ -43,7 +43,7 @@ class _FormForgotPasswordState extends State<FormForgotPassword> {
           FormError(errors: errors),
           SizedBox(height: 20),
           DefaultButton(
-            text: 'Continue',
+            text: 'Continue'.toUpperCase(),
             press: () {
               if (_formkey.currentState!.validate()) {
                 _formkey.currentState!.save();

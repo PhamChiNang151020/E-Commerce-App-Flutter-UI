@@ -1,9 +1,11 @@
 import 'package:ecommerce_app/common/constants.dart';
+import 'package:ecommerce_app/screen/auth/signup/SignUpScreen.dart';
 import 'package:ecommerce_app/widget/DefaultButton.dart';
 import 'package:flutter/material.dart';
 
-import '../../../widget/CartIcon.dart';
-import '../../../widget/CustomSuffixIcon.dart';
+import '../../../../widget/CartIcon.dart';
+// import '../../../widget/CartIcon.dart';
+// import '../../../widget/CustomSuffixIcon.dart';
 import 'FormSignIn.dart';
 
 class BodySignIn extends StatefulWidget {
@@ -88,7 +90,9 @@ class NoAccountText extends StatelessWidget {
           ),
         ),
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, SignUpScreen.routeName);
+            },
             child: Text(
               'Sign Up',
               style: TextStyle(

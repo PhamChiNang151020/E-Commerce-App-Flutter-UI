@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/common/constants.dart';
-import 'package:ecommerce_app/screen/auth/SignInScreen.dart';
+import 'package:ecommerce_app/screen/auth/signin/SignInScreen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../widget/DefaultButton.dart';

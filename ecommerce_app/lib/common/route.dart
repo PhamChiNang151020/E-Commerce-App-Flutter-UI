@@ -1,15 +1,17 @@
 import 'package:ecommerce_app/screen/HomePage.dart';
-import 'package:ecommerce_app/screen/auth/ForgotScreen.dart';
-import 'package:ecommerce_app/screen/auth/SignInScreen.dart';
-import 'package:ecommerce_app/screen/auth/SignUpScreen.dart';
+import 'package:ecommerce_app/screen/auth/completeAccount/complete_Account.dart';
+import 'package:ecommerce_app/screen/auth/forgot/ForgotScreen.dart';
+import 'package:ecommerce_app/screen/auth/signin/SignInScreen.dart';
+import 'package:ecommerce_app/screen/auth/signup/SignUpScreen.dart';
 import 'package:ecommerce_app/screen/splashScreen/splashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 final Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => SplashScreen(),
-  SignUpScreen.routeName: (context) => SignUpScreen(),
   SignInScreen.routeName: (context) => SignInScreen(),
+  SignUpScreen.routeName: (context) => SignUpScreen(),
+  CompleteAccountScreen.routeName: (context) => CompleteAccountScreen(),
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   HomePageScreen.routeName: (context) => HomePageScreen(),
 };

@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/common/theme.dart';
-import 'package:ecommerce_app/screen/auth/components/BodySignIn.dart';
 import 'package:flutter/material.dart';
+
+import 'components/BodySignIn.dart';
 
 class SignInScreen extends StatelessWidget {
   static String routeName = "/sign_in";

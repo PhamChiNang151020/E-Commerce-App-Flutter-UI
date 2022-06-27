@@ -1,4 +1,7 @@
+import 'package:ecommerce_app/common/constants.dart';
 import 'package:flutter/material.dart';
+
+import 'components/BodySignUp.dart';
 
 class SignUpScreen extends StatelessWidget {
   static String routeName = "/sign_up";
@@ -6,6 +9,8 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: BodySignUp(),
+    );
   }
 }

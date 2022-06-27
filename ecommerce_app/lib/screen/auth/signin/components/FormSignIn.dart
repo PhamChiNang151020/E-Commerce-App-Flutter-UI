@@ -1,15 +1,15 @@
 import 'dart:ffi';
 
 import 'package:ecommerce_app/screen/HomePage.dart';
-import 'package:ecommerce_app/screen/auth/ForgotScreen.dart';
+import 'package:ecommerce_app/screen/auth/forgot/ForgotScreen.dart';
 import 'package:ecommerce_app/screen/splashScreen/splashScreen.dart';
 import 'package:flutter/material.dart';
 
-import '../../../common/constants.dart';
-import '../../../helps/KeyBoardUtil.dart';
-import '../../../widget/CustomSuffixIcon.dart';
-import '../../../widget/DefaultButton.dart';
-import '../../../widget/FormError.dart';
+import '../../../../common/constants.dart';
+import '../../../../helps/KeyBoardUtil.dart';
+import '../../../../widget/CustomSuffixIcon.dart';
+import '../../../../widget/DefaultButton.dart';
+import '../../../../widget/FormError.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({Key? key}) : super(key: key);
@@ -198,4 +198,3 @@ class _SignInFormState extends State<SignInForm> {
     );
   }
 }
-

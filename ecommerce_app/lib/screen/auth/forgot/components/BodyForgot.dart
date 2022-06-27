@@ -1,7 +1,7 @@
-import 'package:ecommerce_app/screen/auth/components/FormForgot.dart';
 import 'package:flutter/material.dart';
 
-import '../../../common/constants.dart';
+import '../../../../common/constants.dart';
+import 'FormForgot.dart';
 
 class BodyForgotPassword extends StatefulWidget {
   const BodyForgotPassword({Key? key}) : super(key: key);
