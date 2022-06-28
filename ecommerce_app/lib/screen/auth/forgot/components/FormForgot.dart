@@ -85,11 +85,11 @@ class _FormForgotPasswordState extends State<FormForgotPassword> {
         labelText: "Email",
         hintText: "Enter your email",
         labelStyle: TextStyle(
-          fontSize: 25,
+          fontSize: sizeTitle,
           color: textColor,
         ),
         hintStyle: TextStyle(
-          fontSize: 20,
+          fontSize: sizeText,
           color: textColor,
         ),
         floatingLabelBehavior: FloatingLabelBehavior.always,

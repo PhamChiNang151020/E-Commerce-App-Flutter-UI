@@ -178,14 +178,14 @@ class _FormCompleteState extends State<FormComplete> {
 
   TextStyle styleHint() {
     return TextStyle(
-      fontSize: 20,
+      fontSize: sizeText,
       color: textColor,
     );
   }
 
   TextStyle styleLable() {
     return TextStyle(
-      fontSize: 25,
+      fontSize: sizeTitle,
       color: textColor,
     );
   }

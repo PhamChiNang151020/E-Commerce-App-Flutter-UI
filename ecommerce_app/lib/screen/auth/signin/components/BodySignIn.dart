@@ -42,7 +42,7 @@ class _BodySignInState extends State<BodySignIn> {
                   child: Text(
                     'Sign In',
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: sizeTitle,
                       fontWeight: FontWeight.w600,
                       color: textColor,
                     ),
@@ -85,7 +85,7 @@ class NoAccountText extends StatelessWidget {
         Text(
           "Don’t have an account? ",
           style: TextStyle(
-            fontSize: 16,
+            fontSize: sizeText,
             color: textColor,
           ),
         ),
@@ -96,7 +96,7 @@ class NoAccountText extends StatelessWidget {
             child: Text(
               'Sign Up',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: sizeText,
                 color: defaultPrimaryColor,
               ),
             )),

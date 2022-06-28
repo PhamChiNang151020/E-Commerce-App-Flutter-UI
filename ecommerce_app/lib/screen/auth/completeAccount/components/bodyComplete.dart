@@ -23,7 +23,7 @@ class BodyComplete extends StatelessWidget {
                   child: Text(
                     'Complete Account',
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: sizeTitle,
                       fontWeight: FontWeight.w600,
                       color: textColor,
                     ),
@@ -33,7 +33,7 @@ class BodyComplete extends StatelessWidget {
                 Text(
                   'Complete your detals or continue with social media',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: sizeText,
                   ),
                 ),
                 FormComplete(),

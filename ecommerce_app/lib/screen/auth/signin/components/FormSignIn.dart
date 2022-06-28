@@ -66,7 +66,7 @@ class _SignInFormState extends State<SignInForm> {
                     'Remember me',
                     style: TextStyle(
                       color: textColor,
-                      fontSize: 16,
+                      fontSize: sizeText,
                     ),
                   ),
                 ],
@@ -80,7 +80,7 @@ class _SignInFormState extends State<SignInForm> {
                     'Forgot password',
                     style: TextStyle(
                       color: textColor,
-                      fontSize: 16,
+                      fontSize: sizeText,
                     ),
                   ))
             ],
@@ -186,14 +186,14 @@ class _SignInFormState extends State<SignInForm> {
 
   TextStyle styleHint() {
     return TextStyle(
-      fontSize: 20,
+      fontSize: sizeText,
       color: textColor,
     );
   }
 
   TextStyle styleLabel() {
     return TextStyle(
-      fontSize: 25,
+      fontSize: sizeTitle,
       color: textColor,
     );
   }

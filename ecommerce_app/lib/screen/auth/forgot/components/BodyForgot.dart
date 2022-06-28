@@ -29,7 +29,7 @@ class _BodyForgotPasswordState extends State<BodyForgotPassword> {
                 child: Text(
                   'Forgot password',
                   style: TextStyle(
-                    fontSize: 25,
+                    fontSize: sizeTitle,
                     fontWeight: FontWeight.w600,
                     color: textColor,
                   ),
@@ -39,7 +39,7 @@ class _BodyForgotPasswordState extends State<BodyForgotPassword> {
               Text(
                 'Please enter your email and we will send you a link to return to your account',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: sizeText,
                 ),
               ),
               FormForgotPassword(),

@@ -29,7 +29,7 @@ class _BodySignUpState extends State<BodySignUp> {
                     child: Text(
                       'Register Account',
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: sizeTitle,
                         fontWeight: FontWeight.w600,
                         color: textColor,
                       ),
@@ -39,7 +39,7 @@ class _BodySignUpState extends State<BodySignUp> {
                   Text(
                     'Complete your detals or continue with social media',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: sizeText,
                     ),
                   ),
                   SizedBox(height: 20),
@@ -58,7 +58,7 @@ class _BodySignUpState extends State<BodySignUp> {
                   Text(
                     'By continuing your confirm that you agree with our Term and Condition',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: sizeText,
                     ),
                     textAlign: TextAlign.center,
                   ),
