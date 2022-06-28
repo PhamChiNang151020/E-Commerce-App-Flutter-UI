@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/screen/HomePage.dart';
+import 'package:ecommerce_app/screen/auth/OTP/OtpScreen.dart';
 import 'package:ecommerce_app/screen/auth/completeAccount/complete_Account.dart';
 import 'package:ecommerce_app/screen/auth/forgot/ForgotScreen.dart';
 import 'package:ecommerce_app/screen/auth/signin/SignInScreen.dart';
@@ -13,5 +14,6 @@ final Map<String, WidgetBuilder> routes = {
   SignUpScreen.routeName: (context) => SignUpScreen(),
   CompleteAccountScreen.routeName: (context) => CompleteAccountScreen(),
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
+  OtpScreen.routeName: (context) => OtpScreen(),
   HomePageScreen.routeName: (context) => HomePageScreen(),
 };

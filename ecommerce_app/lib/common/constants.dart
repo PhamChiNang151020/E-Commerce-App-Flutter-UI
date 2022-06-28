@@ -11,6 +11,9 @@ const defaultGradientColor = LinearGradient(
 const seconColor = Color(0xFF979797);
 const textColor = Color(0xFF757575);
 
+double sizeTitle = 25;
+double sizeText = 18;
+
 const animateDuration = Duration(microseconds: 200);
 
 final RegExp emailValidatorRegExp =
@@ -24,3 +27,15 @@ const String kMatchPassError = "Passwords don't match";
 const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
+
+final otpInputDecoration = InputDecoration(
+  contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+  enabledBorder: outlineInputBorder(),
+);
+
+OutlineInputBorder outlineInputBorder() {
+  return OutlineInputBorder(
+    borderRadius: BorderRadius.circular(15),
+    borderSide: BorderSide(color: textColor),
+  );
+}

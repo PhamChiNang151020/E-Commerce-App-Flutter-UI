@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/screen/auth/OTP/OtpScreen.dart';
 import 'package:ecommerce_app/widget/DefaultButton.dart';
 import 'package:ecommerce_app/widget/FormError.dart';
 import 'package:flutter/material.dart';
@@ -56,8 +57,8 @@ class _FormCompleteState extends State<FormComplete> {
                 if (_formkey.currentState!.validate()) {
                   _formkey.currentState!.save();
                   // KeyboardUtil.hideKeyboard(context);
-                  print('CHuyển');
-                  // Navigator.pushNamed(context, CompleteAccountScreen.routeName);
+                  print('Chuyển OTP');
+                  Navigator.pushNamed(context, OtpScreen.routeName);
                 }
               }),
           SizedBox(height: 20),
