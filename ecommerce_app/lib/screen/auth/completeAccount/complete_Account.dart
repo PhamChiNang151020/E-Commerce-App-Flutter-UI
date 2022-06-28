@@ -10,12 +10,12 @@ class CompleteAccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(
-      //     'SignUp',
-      //     style: TextStyle(color: textColor),
-      //   ),
-      // ),
+      appBar: AppBar(
+        title: Text(
+          'SignUp',
+          style: TextStyle(color: defaultPrimaryColor),
+        ),
+      ),
       body: BodyComplete(),
     );
   }

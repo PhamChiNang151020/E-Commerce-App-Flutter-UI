@@ -56,7 +56,7 @@ class _BodySplashScreenState extends State<BodySplashScreen> {
                     ),
                   ),
                   DefaultButton(
-                    text: 'Continue',
+                    text: 'Continue'.toUpperCase(),
                     press: () {
                       Navigator.pushNamed(context, SignInScreen.routeName);
                     },
