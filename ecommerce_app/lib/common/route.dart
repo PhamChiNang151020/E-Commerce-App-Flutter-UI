@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/screen/HomePage.dart';
+import 'package:ecommerce_app/screen/Home/HomePage.dart';
 import 'package:ecommerce_app/screen/auth/OTP/OtpScreen.dart';
 import 'package:ecommerce_app/screen/auth/completeAccount/complete_Account.dart';
 import 'package:ecommerce_app/screen/auth/forgot/ForgotScreen.dart';

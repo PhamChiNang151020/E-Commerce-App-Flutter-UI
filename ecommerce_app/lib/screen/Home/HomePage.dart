@@ -1,6 +1,7 @@
+import 'package:ecommerce_app/screen/Home/components/BodyHome.dart';
 import 'package:flutter/material.dart';
 
-import '../common/constants.dart';
+import '../../common/constants.dart';
 
 class HomePageScreen extends StatelessWidget {
   static String routeName = "/home_page";
@@ -9,14 +10,7 @@ class HomePageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Home Page',
-          style: TextStyle(
-            color: defaultPrimaryColor,
-          ),
-        ),
-      ),
+      body: BodyHomeScreen(),
     );
   }
 }

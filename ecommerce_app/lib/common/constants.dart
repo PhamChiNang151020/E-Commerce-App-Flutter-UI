@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const defaultPrimaryColor = Color(0xFFFF7643);
-const defaultPrimaryLightColor = Color(0xFFFFECDF);
+const defaultPrimaryLightColor = Color.fromARGB(255, 247, 231, 220);
 const defaultGradientColor = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,

@@ -5,7 +5,7 @@ import '../../../../common/constants.dart';
 import '../../../../helps/KeyBoardUtil.dart';
 import '../../../../widget/CustomSuffixIcon.dart';
 import '../../../../widget/FormError.dart';
-import '../../../HomePage.dart';
+import '../../../Home/HomePage.dart';
 
 class FormForgotPassword extends StatefulWidget {
   const FormForgotPassword({Key? key}) : super(key: key);

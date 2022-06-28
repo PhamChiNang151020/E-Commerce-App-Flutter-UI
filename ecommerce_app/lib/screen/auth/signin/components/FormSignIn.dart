@@ -1,6 +1,5 @@
-import 'package:ecommerce_app/screen/HomePage.dart';
+import 'package:ecommerce_app/screen/Home/HomePage.dart';
 import 'package:ecommerce_app/screen/auth/forgot/ForgotScreen.dart';
-import 'package:ecommerce_app/screen/splashScreen/splashScreen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/constants.dart';

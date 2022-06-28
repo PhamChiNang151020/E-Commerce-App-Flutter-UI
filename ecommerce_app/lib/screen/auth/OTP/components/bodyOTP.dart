@@ -1,6 +1,5 @@
 import 'package:ecommerce_app/common/constants.dart';
 import 'package:ecommerce_app/screen/auth/OTP/components/FormOTP.dart';
-import 'package:ecommerce_app/widget/DefaultButton.dart';
 import 'package:flutter/material.dart';
 
 class BodyOTPScreen extends StatefulWidget {
@@ -39,11 +38,6 @@ class _BodyOTPScreenState extends State<BodyOTPScreen> {
                 Timer(),
                 SizedBox(height: 20),
                 FormOTP(),
-                SizedBox(height: 20),
-                DefaultButton(
-                  press: () {},
-                  text: 'continue'.toUpperCase(),
-                ),
                 SizedBox(height: 20),
                 TextButton(
                     onPressed: () {
