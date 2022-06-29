@@ -23,7 +23,6 @@ class _BodySignUpState extends State<BodySignUp> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 60),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20),
                     child: Text(
@@ -62,6 +61,9 @@ class _BodySignUpState extends State<BodySignUp> {
                     ),
                     textAlign: TextAlign.center,
                   ),
+                  SizedBox(
+                    height: 10,
+                  )
                 ],
               ),
             ),

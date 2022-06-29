@@ -40,7 +40,7 @@ class _FormCompleteState extends State<FormComplete> {
       key: _formkey,
       child: Column(
         children: [
-          SizedBox(height: 50),
+          SizedBox(height: 20),
           buildFirstNameFormField(),
           SizedBox(height: 20),
           buildLastNameFormField(),

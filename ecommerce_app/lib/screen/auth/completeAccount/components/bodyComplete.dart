@@ -17,9 +17,8 @@ class BodyComplete extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 60),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
+                  padding: const EdgeInsets.only(bottom: 10),
                   child: Text(
                     'Complete Account',
                     style: TextStyle(
