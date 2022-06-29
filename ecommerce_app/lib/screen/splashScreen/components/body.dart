@@ -17,15 +17,15 @@ class _BodySplashScreenState extends State<BodySplashScreen> {
   @override
   Widget build(BuildContext context) {
     List<Map<String, String>> splashData = [
-      {"text": "Welcome to TOKOTO", "image": "assets/images/splash1.png"},
-      {"text": "Welcome to TOKOTO", "image": "assets/images/splash2.png"},
-      {"text": "Welcome to TOKOTO", "image": "assets/images/splash3.png"},
+      {"text": "Welcome to MP", "image": "assets/images/splash_1.png"},
+      {"text": "Welcome to MP", "image": "assets/images/splash_2.png"},
+      {"text": "Welcome to MP", "image": "assets/images/splash_3.png"},
     ];
     return SafeArea(
       child: Column(
         children: [
           Expanded(
-            flex: 3,
+            // height: MediaQuery.of(context).size.height * 0.8,
             child: PageView.builder(
               onPageChanged: (value) {
                 setState(() {
@@ -39,32 +39,56 @@ class _BodySplashScreenState extends State<BodySplashScreen> {
               ),
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 30),
-                    child: Row(
+          Container(
+            color: Colors.amber,
+            height: MediaQuery.of(context).size.height * 0.2,
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
                         splashData.length,
                         (index) => buildDot(index: index),
                       ),
                     ),
-                  ),
-                  DefaultButton(
-                    text: 'Continue'.toUpperCase(),
-                    press: () {
-                      Navigator.pushNamed(context, SignInScreen.routeName);
-                    },
-                  ),
-                ],
+                    SizedBox(height: 20),
+                    DefaultButton(
+                      text: 'Continue'.toUpperCase(),
+                      press: () {
+                        Navigator.pushNamed(context, SignInScreen.routeName);
+                      },
+                    ),
+                    SizedBox(height: 20),
+                  ],
+                ),
               ),
             ),
-          )
+          ),
+          // Container(
+          //   color: Colors.amber,
+          //   height: MediaQuery.of(context).size.height * 0.2,
+          //   child: Column(
+          //     children: [
+          //       Row(
+          //         mainAxisAlignment: MainAxisAlignment.center,
+          //         children: List.generate(
+          //           splashData.length,
+          //           (index) => buildDot(index: index),
+          //         ),
+          //       ),
+          //       DefaultButton(
+          //         text: 'Continue'.toUpperCase(),
+          //         press: () {
+          //           Navigator.pushNamed(context, SignInScreen.routeName);
+          //         },
+          //       ),
+          //     ],
+          //   ),
+          // )
         ],
       ),
     );
