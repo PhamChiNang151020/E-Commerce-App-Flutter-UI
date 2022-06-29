@@ -28,6 +28,8 @@ const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
 
+const String IncorrectInfomation = "Incorrect Infomation";
+
 final otpInputDecoration = InputDecoration(
   contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
   enabledBorder: outlineInputBorder(),

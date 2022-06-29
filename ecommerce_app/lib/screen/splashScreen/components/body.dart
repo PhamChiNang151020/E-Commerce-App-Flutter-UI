@@ -40,7 +40,6 @@ class _BodySplashScreenState extends State<BodySplashScreen> {
             ),
           ),
           Container(
-            color: Colors.amber,
             height: MediaQuery.of(context).size.height * 0.2,
             child: Center(
               child: Padding(
@@ -68,27 +67,6 @@ class _BodySplashScreenState extends State<BodySplashScreen> {
               ),
             ),
           ),
-          // Container(
-          //   color: Colors.amber,
-          //   height: MediaQuery.of(context).size.height * 0.2,
-          //   child: Column(
-          //     children: [
-          //       Row(
-          //         mainAxisAlignment: MainAxisAlignment.center,
-          //         children: List.generate(
-          //           splashData.length,
-          //           (index) => buildDot(index: index),
-          //         ),
-          //       ),
-          //       DefaultButton(
-          //         text: 'Continue'.toUpperCase(),
-          //         press: () {
-          //           Navigator.pushNamed(context, SignInScreen.routeName);
-          //         },
-          //       ),
-          //     ],
-          //   ),
-          // )
         ],
       ),
     );

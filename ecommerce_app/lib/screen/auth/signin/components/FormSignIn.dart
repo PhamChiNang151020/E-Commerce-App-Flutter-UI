@@ -16,6 +16,12 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInFormState extends State<SignInForm> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  String _email = 'admin@gmail.com';
+  String _password = 'Admin12345@';
+
   final _formkey = GlobalKey<FormState>();
   bool _obscureText = true;
   String? email;
@@ -90,10 +96,19 @@ class _SignInFormState extends State<SignInForm> {
             text: 'SIGN IN',
             press: () {
               if (_formkey.currentState!.validate()) {
-                _formkey.currentState!.save();
-                KeyboardUtil.hideKeyboard(context);
-                print('CHuyển');
-                Navigator.pushNamed(context, HomePageScreen.routeName);
+                if (emailController.text == _email &&
+                    passwordController.text == _password) {
+                  _formkey.currentState!.save();
+                  KeyboardUtil.hideKeyboard(context);
+                  Navigator.pushNamed(context, HomePageScreen.routeName);
+                } else {
+                  addError(error: IncorrectInfomation);
+                  removeError(error: kEmailNullError);
+                  removeError(error: kInvalidEmailError);
+                  removeError(error: kPassNullError);
+                  removeError(error: kShortPassError);
+                  return null;
+                }
               }
             },
           )
@@ -104,12 +119,18 @@ class _SignInFormState extends State<SignInForm> {
 
   TextFormField buildPasswordFormField() {
     return TextFormField(
+      controller: passwordController,
       obscureText: _obscureText,
       onSaved: (newValue) => password = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
           removeError(error: kPassNullError);
+          removeError(error: IncorrectInfomation);
         } else if (value.length >= 8) {
+          removeError(error: kShortPassError);
+          removeError(error: IncorrectInfomation);
+        } else if (value.isNotEmpty && value.length >= 8) {
+          removeError(error: kPassNullError);
           removeError(error: kShortPassError);
         }
         return null;
@@ -151,12 +172,18 @@ class _SignInFormState extends State<SignInForm> {
 
   TextFormField buildEmailFormField() {
     return TextFormField(
+      controller: emailController,
       keyboardType: TextInputType.emailAddress,
       onSaved: (newValue) => email = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
           removeError(error: kEmailNullError);
+          removeError(error: IncorrectInfomation);
         } else if (emailValidatorRegExp.hasMatch(value)) {
+          removeError(error: kInvalidEmailError);
+          removeError(error: IncorrectInfomation);
+        } else if (value.isNotEmpty && emailValidatorRegExp.hasMatch(value)) {
+          removeError(error: kEmailNullError);
           removeError(error: kInvalidEmailError);
         }
         return null;
