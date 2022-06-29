@@ -21,9 +21,6 @@ class _BodyForgotPasswordState extends State<BodyForgotPassword> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 60,
-              ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Text(
