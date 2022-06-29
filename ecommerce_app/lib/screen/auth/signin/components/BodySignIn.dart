@@ -23,10 +23,11 @@ class _BodySignInState extends State<BodySignIn> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
+            physics: NeverScrollableScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 40),
+                SizedBox(height: 20),
                 Text(
                   'Welcome to\nMy App',
                   style: TextStyle(
@@ -36,7 +37,7 @@ class _BodySignInState extends State<BodySignIn> {
                   ),
                   // textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 40),
+                SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 20),
                   child: Text(
@@ -50,16 +51,16 @@ class _BodySignInState extends State<BodySignIn> {
                   ),
                 ),
                 SignInForm(),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CardIcon(image: 'assets/icon/fb.png', onPress: () {}),
-                      Padding(padding: EdgeInsets.symmetric(horizontal: 15)),
-                      CardIcon(image: 'assets/icon/gg.png', onPress: () {}),
-                    ],
-                  ),
+                SizedBox(
+                  height: 5,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CardIcon(image: 'assets/icon/fb.png', onPress: () {}),
+                    Padding(padding: EdgeInsets.symmetric(horizontal: 15)),
+                    CardIcon(image: 'assets/icon/gg.png', onPress: () {}),
+                  ],
                 ),
                 NoAccountText(),
                 SizedBox(height: 20),
@@ -85,7 +86,7 @@ class NoAccountText extends StatelessWidget {
         Text(
           "Don’t have an account? ",
           style: TextStyle(
-            fontSize: sizeText,
+            fontSize: sizeText - 3,
             color: textColor,
           ),
         ),
@@ -96,7 +97,7 @@ class NoAccountText extends StatelessWidget {
             child: Text(
               'Sign Up',
               style: TextStyle(
-                fontSize: sizeText,
+                fontSize: sizeText - 3,
                 color: defaultPrimaryColor,
               ),
             )),

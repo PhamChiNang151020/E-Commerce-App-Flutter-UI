@@ -53,43 +53,7 @@ class _SignInFormState extends State<SignInForm> {
           SizedBox(height: 30),
           buildPasswordFormField(),
           SizedBox(height: 15),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  Checkbox(
-                    value: remember,
-                    activeColor: defaultPrimaryColor,
-                    onChanged: (value) {
-                      setState(() {
-                        remember = value!;
-                      });
-                    },
-                  ),
-                  Text(
-                    'Remember me',
-                    style: TextStyle(
-                      color: textColor,
-                      fontSize: sizeText,
-                    ),
-                  ),
-                ],
-              ),
-              TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(
-                        context, ForgotPasswordScreen.routeName);
-                  },
-                  child: Text(
-                    'Forgot password',
-                    style: TextStyle(
-                      color: textColor,
-                      fontSize: sizeText,
-                    ),
-                  ))
-            ],
-          ),
+          Remember_Forgot(context),
           FormError(errors: errors),
           SizedBox(height: 15),
           DefaultButton(
@@ -114,6 +78,45 @@ class _SignInFormState extends State<SignInForm> {
           )
         ],
       ),
+    );
+  }
+
+  Row Remember_Forgot(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            Checkbox(
+              value: remember,
+              activeColor: defaultPrimaryColor,
+              onChanged: (value) {
+                setState(() {
+                  remember = value!;
+                });
+              },
+            ),
+            Text(
+              'Remember me',
+              style: TextStyle(
+                color: textColor,
+                fontSize: sizeText - 3,
+              ),
+            ),
+          ],
+        ),
+        TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, ForgotPasswordScreen.routeName);
+            },
+            child: Text(
+              'Forgot password',
+              style: TextStyle(
+                color: textColor,
+                fontSize: sizeText - 3,
+              ),
+            ))
+      ],
     );
   }
 
