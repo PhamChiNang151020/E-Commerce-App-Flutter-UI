@@ -16,6 +16,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.0
   provider: ^6.0.3
+  flutter_launcher_icons: ^0.9.3
 
 dev_dependencies:
   flutter_test:
@@ -23,10 +24,18 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
 
+flutter_icons:
+  image_path: assets/launcher/ic.png
+  # image_path_android: assets/launcher/ic.png
+  android: true
+  ios: true
+
+
 flutter:
   assets:
     - assets/images/
     - assets/icon/
+    - assets/launcher/
   fonts:
     - family: kanit
       fonts:
