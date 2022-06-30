@@ -84,17 +84,25 @@ class _FormForgotPasswordState extends State<FormForgotPassword> {
       decoration: InputDecoration(
         labelText: "Email",
         hintText: "Enter your email",
-        labelStyle: TextStyle(
-          fontSize: sizeTitle,
-          color: textColor,
-        ),
-        hintStyle: TextStyle(
-          fontSize: sizeText,
-          color: textColor,
-        ),
+        labelStyle: styleLabel(),
+        hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/mail.png'),
       ),
+    );
+  }
+
+  TextStyle styleHint() {
+    return TextStyle(
+      fontSize: sizeText - 2,
+      color: textColor,
+    );
+  }
+
+  TextStyle styleLabel() {
+    return TextStyle(
+      fontSize: sizeTitle - 4,
+      color: textColor,
     );
   }
 }
