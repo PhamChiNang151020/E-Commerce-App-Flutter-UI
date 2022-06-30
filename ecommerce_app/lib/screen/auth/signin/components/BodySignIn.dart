@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/common/constants.dart';
+import 'package:ecommerce_app/common/sizeConfig.dart';
 import 'package:ecommerce_app/screen/auth/signup/SignUpScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -21,14 +22,16 @@ class _BodySignInState extends State<BodySignIn> {
       child: SizedBox(
         width: double.infinity,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding:
+              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: SingleChildScrollView(
+            physics: NeverScrollableScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 20),
                 Text(
-                  'Welcome to\nMy App',
+                  'Welcome to MPE',
                   style: TextStyle(
                     fontSize: 40,
                     color: defaultPrimaryColor,
@@ -38,7 +41,8 @@ class _BodySignInState extends State<BodySignIn> {
                 ),
                 SizedBox(height: 20),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
+                  padding:
+                      EdgeInsets.only(bottom: getProportionateScreenWidth(20)),
                   child: Text(
                     'Sign In',
                     style: TextStyle(
@@ -50,9 +54,7 @@ class _BodySignInState extends State<BodySignIn> {
                   ),
                 ),
                 SignInForm(),
-                SizedBox(
-                  height: 5,
-                ),
+                SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

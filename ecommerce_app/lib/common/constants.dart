@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/sizeConfig.dart';
 import 'package:flutter/material.dart';
 
 const defaultPrimaryColor = Color(0xFFFF7643);
@@ -11,8 +12,8 @@ const defaultGradientColor = LinearGradient(
 const seconColor = Color(0xFF979797);
 const textColor = Color(0xFF757575);
 
-double sizeTitle = 25;
-double sizeText = 18;
+double sizeTitle = getProportionateScreenWidth(26);
+double sizeText = getProportionateScreenWidth(16);
 
 const animateDuration = Duration(microseconds: 200);
 
@@ -41,4 +42,3 @@ OutlineInputBorder outlineInputBorder() {
     borderSide: BorderSide(color: textColor),
   );
 }
-

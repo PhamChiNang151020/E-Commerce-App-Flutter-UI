@@ -23,7 +23,7 @@ InputDecorationTheme inputDecorationTheme() {
     floatingLabelBehavior: FloatingLabelBehavior.always,
     contentPadding: EdgeInsets.symmetric(
       horizontal: 25,
-      vertical: 20,
+      vertical: 15,
     ),
     enabledBorder: outlineInputBorder,
     focusedBorder: outlineInputBorder,

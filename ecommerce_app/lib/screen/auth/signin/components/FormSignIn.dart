@@ -52,32 +52,35 @@ class _SignInFormState extends State<SignInForm> {
           buildEmailFormField(),
           SizedBox(height: 30),
           buildPasswordFormField(),
-          SizedBox(height: 15),
           Remember_Forgot(context),
           FormError(errors: errors),
           SizedBox(height: 15),
-          DefaultButton(
-            text: 'SIGN IN',
-            press: () {
-              if (_formkey.currentState!.validate()) {
-                if (emailController.text == _email &&
-                    passwordController.text == _password) {
-                  _formkey.currentState!.save();
-                  KeyboardUtil.hideKeyboard(context);
-                  Navigator.pushNamed(context, HomePageScreen.routeName);
-                } else {
-                  addError(error: IncorrectInfomation);
-                  removeError(error: kEmailNullError);
-                  removeError(error: kInvalidEmailError);
-                  removeError(error: kPassNullError);
-                  removeError(error: kShortPassError);
-                  return null;
-                }
-              }
-            },
-          )
+          Btn_SignIn(context)
         ],
       ),
+    );
+  }
+
+  DefaultButton Btn_SignIn(BuildContext context) {
+    return DefaultButton(
+      text: 'SIGN IN',
+      press: () {
+        if (_formkey.currentState!.validate()) {
+          if (emailController.text == _email &&
+              passwordController.text == _password) {
+            _formkey.currentState!.save();
+            KeyboardUtil.hideKeyboard(context);
+            Navigator.pushNamed(context, HomePageScreen.routeName);
+          } else {
+            addError(error: IncorrectInfomation);
+            removeError(error: kEmailNullError);
+            removeError(error: kInvalidEmailError);
+            removeError(error: kPassNullError);
+            removeError(error: kShortPassError);
+            return null;
+          }
+        }
+      },
     );
   }
 
@@ -166,6 +169,7 @@ class _SignInFormState extends State<SignInForm> {
               _obscureText ? 'assets/icon/lock.png' : 'assets/icon/un_lock.png',
               width: 25,
               height: 25,
+              color: textColor,
             ),
           ),
         ),
@@ -215,14 +219,14 @@ class _SignInFormState extends State<SignInForm> {
 
   TextStyle styleHint() {
     return TextStyle(
-      fontSize: sizeText,
+      fontSize: sizeText - 2,
       color: textColor,
     );
   }
 
   TextStyle styleLabel() {
     return TextStyle(
-      fontSize: sizeTitle,
+      fontSize: sizeTitle - 4,
       color: textColor,
     );
   }

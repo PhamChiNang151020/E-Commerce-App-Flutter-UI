@@ -1,3 +1,5 @@
+import 'package:ecommerce_app/common/constants.dart';
+import 'package:ecommerce_app/common/sizeConfig.dart';
 import 'package:flutter/material.dart';
 
 class CustomSuffixIcon extends StatelessWidget {
@@ -14,8 +16,9 @@ class CustomSuffixIcon extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
       child: Image.asset(
         icon!,
-        height: 22,
-        width: 22,
+        height: getProportionateScreenHeight(22),
+        width: getProportionateScreenWidth(22),
+        color: textColor,
       ),
     );
   }

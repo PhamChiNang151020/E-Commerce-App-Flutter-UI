@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/constants.dart';
 import 'package:flutter/material.dart';
 
 class FormError extends StatelessWidget {
@@ -30,7 +31,7 @@ class FormError extends StatelessWidget {
         ),
         Text(
           error,
-          style: TextStyle(color: Colors.red, fontSize: 16),
+          style: TextStyle(color: Colors.red, fontSize: sizeText - 3),
         ),
       ],
     );
