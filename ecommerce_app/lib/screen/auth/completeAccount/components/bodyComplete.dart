@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/sizeConfig.dart';
 import 'package:ecommerce_app/screen/auth/completeAccount/components/FormComplete.dart';
 import 'package:flutter/material.dart';
 
@@ -12,13 +13,15 @@ class BodyComplete extends StatelessWidget {
       child: SizedBox(
         width: double.infinity,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding:
+              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
+                  padding:
+                      EdgeInsets.only(bottom: getProportionateScreenWidth(20)),
                   child: Text(
                     'Complete Account',
                     style: TextStyle(

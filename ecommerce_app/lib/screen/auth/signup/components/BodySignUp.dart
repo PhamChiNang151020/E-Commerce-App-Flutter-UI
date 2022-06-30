@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/sizeConfig.dart';
 import 'package:ecommerce_app/screen/auth/signup/components/FormSignUp.dart';
 import 'package:flutter/material.dart';
 
@@ -18,13 +19,15 @@ class _BodySignUpState extends State<BodySignUp> {
       child: SizedBox(
           width: double.infinity,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(
+                horizontal: getProportionateScreenWidth(20)),
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 20),
+                    padding: EdgeInsets.only(
+                        bottom: getProportionateScreenWidth(10)),
                     child: Text(
                       'Register Account',
                       style: TextStyle(
@@ -41,7 +44,7 @@ class _BodySignUpState extends State<BodySignUp> {
                       fontSize: sizeText,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
                   FormSignUp(),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 20),
@@ -49,7 +52,9 @@ class _BodySignUpState extends State<BodySignUp> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CardIcon(image: 'assets/icon/fb.png', onPress: () {}),
-                        Padding(padding: EdgeInsets.symmetric(horizontal: 15)),
+                        Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: getProportionateScreenWidth(15))),
                         CardIcon(image: 'assets/icon/gg.png', onPress: () {}),
                       ],
                     ),
@@ -61,9 +66,7 @@ class _BodySignUpState extends State<BodySignUp> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
-                    height: 10,
-                  )
+                  SizedBox(height: 10)
                 ],
               ),
             ),

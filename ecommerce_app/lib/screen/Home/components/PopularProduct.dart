@@ -62,10 +62,13 @@ class ProductCart extends StatelessWidget {
                   child: Image.asset(product.images[0]),
                 ),
               ),
-              Text(
-                product.title,
-                style: TextStyle(
-                  fontSize: sizeText - 3,
+              SizedBox(
+                height: 35,
+                child: Text(
+                  product.title,
+                  style: TextStyle(
+                    fontSize: sizeText - 3,
+                  ),
                 ),
               ),
               Row(

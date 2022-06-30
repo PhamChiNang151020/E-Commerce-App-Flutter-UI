@@ -86,7 +86,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Logitech Head G657284",
+    title: "Logitech Head",
     price: 20.20,
     description: description,
     rating: 4.1,

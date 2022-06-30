@@ -86,7 +86,7 @@ class _FormCompleteState extends State<FormComplete> {
       decoration: InputDecoration(
         labelText: "Address",
         hintText: "Enter your address",
-        labelStyle: styleLable(),
+        labelStyle: styleLabel(),
         hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/location.png'),
@@ -114,7 +114,7 @@ class _FormCompleteState extends State<FormComplete> {
       decoration: InputDecoration(
         labelText: "Phone number",
         hintText: "Enter your phone number",
-        labelStyle: styleLable(),
+        labelStyle: styleLabel(),
         hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/phone.png'),
@@ -141,7 +141,7 @@ class _FormCompleteState extends State<FormComplete> {
       decoration: InputDecoration(
         labelText: "First name",
         hintText: "Enter your first name",
-        labelStyle: styleLable(),
+        labelStyle: styleLabel(),
         hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/account.png'),
@@ -168,7 +168,7 @@ class _FormCompleteState extends State<FormComplete> {
       decoration: InputDecoration(
         labelText: "Last name",
         hintText: "Enter your last name",
-        labelStyle: styleLable(),
+        labelStyle: styleLabel(),
         hintStyle: styleHint(),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSuffixIcon(icon: 'assets/icon/account.png'),
@@ -178,14 +178,14 @@ class _FormCompleteState extends State<FormComplete> {
 
   TextStyle styleHint() {
     return TextStyle(
-      fontSize: sizeText,
+      fontSize: sizeText - 2,
       color: textColor,
     );
   }
 
-  TextStyle styleLable() {
+  TextStyle styleLabel() {
     return TextStyle(
-      fontSize: sizeTitle,
+      fontSize: sizeTitle - 4,
       color: textColor,
     );
   }

@@ -200,14 +200,14 @@ class _FormSignUpState extends State<FormSignUp> {
 
   TextStyle styleHint() {
     return TextStyle(
-      fontSize: 20,
+      fontSize: sizeText - 2,
       color: textColor,
     );
   }
 
   TextStyle styleLabel() {
     return TextStyle(
-      fontSize: sizeTitle,
+      fontSize: sizeTitle - 4,
       color: textColor,
     );
   }
